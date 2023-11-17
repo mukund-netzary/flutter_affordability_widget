@@ -9,6 +9,7 @@ const String viewType = 'android-view-razor-pay';
 const Map<String, dynamic> creationParams = <String, dynamic>{};
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
