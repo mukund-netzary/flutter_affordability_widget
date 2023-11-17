@@ -1,16 +1,27 @@
-# flutter_affordability_widget
+# Flutter Razorpay Affordability Widget
 
-A new Flutter project.
+Razorpay Affordability Widget integration for flutter. Uses hybrid composition to call android native view as mentioned in the [Hosting Native views on flutter](https://docs.flutter.dev/platform-integration/android/platform-views?tab=android-platform-views-kotlin-tab)
 
-## Getting Started
+## Run Locally
 
-This project is a starting point for a Flutter application.
+Fork the project.
 
-A few resources to get you started if this is your first Flutter project:
+Add the key in android/local.properties file
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```flutter
+  razorPay.testKey="YOUR_KEY_HERE"
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+-  Open the project as android project in android studio.
+-  Open files in android studio, then select Build.
+-  Select Make Project.
+
+By doing so, the local properties value will get synced with the project.
+
+Clean the project on flutter module.
+
+```flutter
+flutter clean
+flutter pub get
+```
+Run the app. When the widget is loaded, pressing on any of the buttons will crash the application.
