@@ -1,6 +1,7 @@
 package com.example.razorpay
 
 import android.content.Context
+import android.app.Activity
 import android.util.Log
 import  android.view.View
 import android.widget.FrameLayout
@@ -13,7 +14,8 @@ import org.json.JSONObject
 internal class NativeView(
     context: Context,
     id: Int,
-    creationParams: Map<String?, Any?>?
+    creationParams: Map<String?, Any?>?,
+    activity: Activity
 ) : PlatformView {
     private val widget: Widget
     private val frameLayout: FrameLayout
@@ -24,7 +26,7 @@ internal class NativeView(
     override fun dispose() {}
 
     init {
-        widget = Widget(context)
+        widget = Widget(activity)
         frameLayout = FrameLayout(context)
         frameLayout.addView(widget)
         Log.d("Razor Pay Debug", "RazorPay Key: ${BuildConfig.RAZORPAYKEY}")
@@ -37,6 +39,6 @@ internal class NativeView(
     }
     """.trimIndent()
         )
-        widget.render(context, widgetConfig)
+        widget.render(activity, widgetConfig)
     }
 }

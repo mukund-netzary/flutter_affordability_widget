@@ -10,7 +10,7 @@ class MainActivity: FlutterActivity() {
             .platformViewsController
             .registry
             .registerViewFactory("android-view-razor-pay",
-                NativeViewFactory()
+                NativeViewFactory(this@MainActivity)
             )
     }
 }
