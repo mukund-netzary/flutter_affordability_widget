@@ -49,7 +49,7 @@ android {
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
-        buildConfigField 'String', 'RAZORPAYKEY', getRazorPayKey
+        buildConfigField 'String', 'RAZORPAYKEY', '"rzp_test_1DP5mmOlF5G5ag"'
     }
 
     buildTypes {
